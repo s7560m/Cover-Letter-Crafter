@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Cover Letter Crafter</title>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <div id="paragraph">
+            <p>What's the company called?</p>
+            <input v-model="company">
+            <p>What's the position you're applying for?</p>
+            <input v-model="position">
+            <p>Input the entire indeed job description in the textfield below </p>
+            <input v-model="str">
+            <button v-on:click="generate">Generate</button>
+            <div>
+            </div>
+            <p>Your produced cover letter below!</p>
+            <textArea class="textArea" style="width:250px;height:150px;">{{ string }}</textArea>
+            <!-- Paragraph will show only when cover letter is produced -->
+            <p>{{ (string != "") ? "Your cover letter has been created!" : ""}}</p>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
